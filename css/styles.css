@@ -1,6 +1,8 @@
+/* Paleta de colores: #C22C6CE, #C0D0EF, #66BDC0, #304A6E, #0F1C30 */
+
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 body{
@@ -8,12 +10,16 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: #0F1C30;
+    color: #C2C6CE;
 }
 
 .cabecera{
     padding: 2rem;
-    background-color: brown;
+    background-color: #66BDC0;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 .navegacion{
@@ -22,17 +28,44 @@ body{
     justify-content: flex-end;
 }
 
+.navegacion li{
+    list-style: none;
+}
+
+
+.enlace{
+    color: white;
+    text-decoration: none;
+}
+
 #welcome-section{
     width: 100%;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;
     height: 100vh;
 }
 
-#project-tile{
-    display: flex;
+h1, h3{
+    text-align: center;
 }
 
-#project-tile a{
-    flex-direction: column;
+h3{
+    margin-top: 200px;
+}
+
+.subtitulo{
+    text-align: center;
+    padding: 2rem;
+}
+
+.lang-cards-2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto{
+    text-align: center;
 }
 
 .portada{
