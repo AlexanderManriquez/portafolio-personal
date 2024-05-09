@@ -30,6 +30,7 @@ body{
 
 .navegacion li{
     list-style: none;
+    margin-right: 30px;
 }
 
 
@@ -49,6 +50,7 @@ body{
 h1{
     font-size: 2rem;
 }
+
 h1, h3{
     text-align: center;
     flex-direction: row;
@@ -114,15 +116,16 @@ h3{
     padding: 15px;
 }
 
-.portada p{
-    text-align: center;
-}
-
 .logos{
     width: 50px;
     height: 50px;
 }
 
+.social{
+    padding: 1rem;      
+}
+
 .footer{
     text-align: center;
+    padding-top: 1rem;  
 }
