@@ -71,14 +71,19 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center;
+    justify-content: center; /* Centra los elementos verticalmente */
     flex: 0 0 auto; /* Fuerza a los elementos a mantener su tamaño */
     scroll-snap-align: start; /* Alinea el comienzo de cada imagen con el inicio del contenedor */
 }
   
-.project-tile a{
-    justify-content: space-between;
-    flex-wrap: wrap;
+.enlace img {
+    width: 300px; 
+    height: 300px; 
+    padding: 15px;
+}
+
+.enlace p {
+    text-align: center; /* Centra el texto horizontalmente */
 }
 
 .subtitulo{
