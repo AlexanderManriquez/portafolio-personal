@@ -1,13 +1,21 @@
-// Selecciona el contenedor del carrusel
 const projectTile = document.querySelector('.project-tile');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
 
-// Función para desplazar automáticamente el carrusel cada cierto tiempo
-function autoScroll() {
-  projectTile.scrollLeft += projectTile.offsetWidth; // Desplaza una imagen a la vez
-  if (projectTile.scrollLeft >= (projectTile.scrollWidth - projectTile.offsetWidth)) {
-    projectTile.scrollLeft = 0; // Vuelve al inicio cuando se alcanza el final
-  }
+function scrollCarousel(direction) {
+    const scrollAmount = projectTile.offsetWidth;
+    if (direction === 'next') {
+        projectTile.scrollLeft += scrollAmount;
+        if (projectTile.scrollLeft >= (projectTile.scrollWidth - projectTile.offsetWidth)) {
+            projectTile.scrollLeft = 0;
+        }
+    } else if (direction === 'prev') {
+        projectTile.scrollLeft -= scrollAmount;
+        if (projectTile.scrollLeft <= 0) {
+            projectTile.scrollLeft = projectTile.scrollWidth - projectTile.offsetWidth;
+        }
+    }
 }
 
-// Intervalo para desplazamiento automático cada 3 segundos (puedes ajustar el tiempo)
-setInterval(autoScroll, 3000);
+nextButton.addEventListener('click', () => scrollCarousel('next'));
+prevButton.addEventListener('click', () => scrollCarousel('prev'));
