@@ -65,30 +65,67 @@ h3{
     text-shadow: 1px 1px 2px #C2C6CE;
 }
 
-#projects{
+#projects {
     width: 100%;
+    position: relative; /* Para posicionar las flechas correctamente */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .project-tile {
     display: flex;
-    overflow-x: auto; /* Permite desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Hace que el desplazamiento se detenga en cada imagen */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; /* Hace el desplazamiento más suave */
+    -ms-overflow-style: none;  /* Elimina la barra de desplazamiento en IE y Edge */
+    scrollbar-width: none;  /* Elimina la barra de desplazamiento en Firefox */
 }
-  
+
+.project-tile::-webkit-scrollbar {
+    display: none;  /* Elimina la barra de desplazamiento en Chrome, Safari y Opera */
+}
+
 .enlace {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    flex: 0 0 auto; /* Fuerza a los elementos a mantener su tamaño */
-    scroll-snap-align: start; /* Alinea el comienzo de cada imagen con el inicio del contenedor */
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 10px;
 }
-  
+
 .enlace img {
-    width: 300px; 
-    height: 300px; 
+    width: 300px;
+    height: 300px;
     padding: 15px;
 }
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
 
 .enlace p {
     text-align: center; /* Centra el texto horizontalmente */
