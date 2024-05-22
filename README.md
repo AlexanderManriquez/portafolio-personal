@@ -38,5 +38,5 @@ Para la construcción de esta página se utilizó:
 
 ## Visita el sitio
 
-🔗 <a href="https://alexandermanriquez.github.io/portafolio-personal>Mi portafolio</a>
+🔗 <a href="https://alexandermanriquez.github.io/portafolio-personal">Mi portafolio</a>
 
